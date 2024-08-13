@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/*css resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lexend", sans-serif;
+    color: #6b7280;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
+/*utility classes*/
+.sign-in, .register{
+    padding: 10px 16px;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+    font-size: 13px;
+}
+.sign-in{
+    color: black;
+    margin-right: 5px;
+}
+/*text in .register needs to remain white*/
+.register:hover{
+    color: white;
+}
+.register{
+    background-color: rgb(20, 176, 76);
+    color: white;
+}
+/*no effect on search icon when hovered on*/
+.sign-in:hover, .register:hover, #open-search:hover{
+    filter: brightness(80%);
+}
+/*header*/
+header{
+    display: flex;
+    padding: 20px 30px;
+    align-items: center;
+    gap: 10px;
+}
+#open-search{
+    background: none;
+    border: none;
+}
+header nav>*{
+    margin-left: 40px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+/*main*/
+.intro{
+    padding: 0px 30px;
+    background-image: url(./images/eCitizen-hero-banner-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.intro h1{
+    margin-top: 120px;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    width: 70%;
+}
+#glass{
+    background-color: rgba(17, 24, 39, 0.7704);
+    backdrop-filter: blur(4px);/*research on backdrop filter*/
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /*glassmorphism*/
+}
+#glass input{
+    border: none;
+    display: block;
+    width: 100%;
+    font: inherit;
+    margin-left: 18px;
+}
+#glass input:focus{
+    outline: none;
+}
+#glass form{
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+    padding: 15px;
+    margin: 20px 0px;
+    color: darkgrey;
+}
+#glass nav{
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    margin-top: 60px;
+    gap: 20px;
+    padding: 0 20px;
+    padding-bottom: 50px;
+}/*pb-evenly spacing the links and getting the desired text format*/
+#glass nav p{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 73%;
+}
+#glass nav a{
+    color: white;
+}
+#glass nav a:hover img{
+    filter: brightness(80%);
+}
+input::placeholder{
+    color: darkgrey;
+}
+.get-started{
+    background-image: url(./images/banner-1.jpg);
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    margin-bottom: 55px;
+    background-size: cover;
+    background-position: center;/*new property*/
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.get-started h2{
+    padding: 30px;
+    padding-left: 35px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 65%;
+    font-weight: 500;
+    font-size: 27px;
+}
+.get-started div{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: rgba(17, 24, 39, 0.7704);
+    backdrop-filter: blur(4px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.get-started div h3{
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 5px;
+}
+.get-started h2, .get-started h3{
+    color: white;
+}
+/*agencies*/
+#agencies h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #474d58;
+    margin-left: 28px;
+}
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin: 0 30px;
+    margin-top: 22px;
+    margin-bottom: 50px;
+}
+.container p:nth-child(3){
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.container p:nth-child(2){
+    border-top: 1px solid lightgrey;
+    padding-top: 10px;
+    font-weight: 550;
+    font-size: 15px;
+}
+.container{
+    border: 1px solid rgb(234, 226, 226);
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+/*pb-properly animating the links*/
+.container:hover, .container2:hover{
+    background-color: rgb(247, 248, 249);
+}
+.container:hover p, .container2:hover span{
+    color: black;
+}
+/*counties*/
+#counties h2{
+    margin-left: 28px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #474d58;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+    margin: 0 30px;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 35px;
+}
+.container2{
+    border: 1px solid rgb(234, 226, 226);
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+.container2 span{
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    bottom: 20px;
+}
+/*pb- aligning the text at the centre-solved*/
+#access{
+    background-color: rgb(243 244 246);
+}
+/*pb-access background-color*/
+.content{
+    padding: 70px 30px;
+}
+.content h3{
+    color: rgb(17 24 39);
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.content .enjoy{
+    font-size: 16.5px;
+    color: #636466;
+    width: 40%;
+    line-height: 25px;
+    font-weight: 400;
+}
+.intel{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 75px;
+    gap: 60px;
+}
+.intel>div>p:nth-child(2){
+    color: rgb(17 24 39);
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.intel>div>p:nth-child(3){
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+}
+/*footer*/
+footer{
+    background-color: rgb(39 46 40);
+}
+.foot{
+    margin: 0 30px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.1px solid rgb(66, 66, 66);
+    justify-content: space-between;
+}
+.top-left p{
+    color: rgb(249 250 251);
+    font-size: 12.5px;
+    padding-top: 22px;
+}
+.top-right nav a{
+    color: white;
+    padding-left: 25px;
+    font-weight: 550;
+    font-size: 14.5px;
+}
+.top-right nav{
+    padding-top: 18px;
+}
+.copyright{
+    text-align: center;
+    font-size: 12.5px;
+    padding: 30px 0;
+}
+.copyright p{
+    color: rgb(209 213 219);
+}
